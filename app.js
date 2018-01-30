@@ -15,9 +15,9 @@ const user = require('./routes/users');
 // This will configure Passport to use Auth0
 const strategy = new Auth0Strategy(
   {
-    domain: 'toyurc.auth0.com',
-    clientID: 'eXfMpfjjI8pQUlQXvAiv8scpUq5zzyyV',
-    clientSecret: 'qPXL0-dCC315nAON7YNfUe-SEifH4Ja6SdOJ0b_WybMUwPTjaLrtFqv0GZUyx6AM',
+    domain: 'your.domain',
+    clientID: 'ClientID',
+    clientSecret: 'ClientSecret',
     callbackURL:'http://localhost:3000/callback'
   },
   function(accessToken, refreshToken, extraParams, profile, done) {
