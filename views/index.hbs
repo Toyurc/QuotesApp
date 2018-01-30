@@ -1,0 +1,24 @@
+{{#if loggedIn }}
+  <h1>Famous Quotes</h1>
+  <blockquote>
+    <p id="quoteBody">Fetching...</p>
+    <footer id="quoteAuthor"></footer>
+  </blockquote>
+{{else}}
+  <div class="alert alert-danger">
+    <h3> Kindly login to see the amazing quotes</h3>
+    <h4>Please <a href="/login"> Log In</a> to continue.</h4>
+  </div>
+{{/if}}
+
+<script>
+//ensure the page has completely loaded
+  $(document).ready(function(){
+    //send a get request to get random quote once page loads
+    jQuery.getJSON('https://talaikis.com/api/quotes/random', function(data){
+      //update the view with the quote
+      $('#quoteBody').text(data.quote)
+      $('#quoteAuthor').text(data.author)
+    })
+  })
+</script>
