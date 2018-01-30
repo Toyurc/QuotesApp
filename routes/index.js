@@ -3,8 +3,8 @@ const passport = require('passport');
 const router = express.Router();
 
 const env = {
-  AUTH0_CLIENT_ID: 'eXfMpfjjI8pQUlQXvAiv8scpUq5zzyyV',
-  AUTH0_DOMAIN: 'toyurc.auth0.com',
+  AUTH0_CLIENT_ID: 'ClientID',
+  AUTH0_DOMAIN: 'your.domain',
   AUTH0_CALLBACK_URL: 'localhost:3000/callback'
 };
 
